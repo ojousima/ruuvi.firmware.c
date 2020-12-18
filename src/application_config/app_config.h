@@ -163,6 +163,7 @@
 #endif
 
 /** @brief Enable Ruuvi NFC in application. */
+#define APP_NFC_ENABLED 0
 #ifndef APP_NFC_ENABLED
 #   define APP_NFC_ENABLED RB_NFC_INTERNAL_INSTALLED
 #endif
@@ -198,6 +199,7 @@
 #   define RT_ADV_ENABLED APP_ADV_ENABLED
 #endif
 
+#define APP_GATT_ENABLED 0
 #ifndef APP_GATT_ENABLED
 //!< If Flash is at premium, cut GATT off by default.
 #   define APP_GATT_ENABLED (RB_FLASH_SPACE_AVAILABLE > RB_FLASH_SPACE_SMALL)

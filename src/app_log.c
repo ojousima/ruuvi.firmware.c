@@ -165,6 +165,7 @@ rd_status_t app_log_init (void)
 rd_status_t app_log_process (const rd_sensor_data_t * const sample)
 {
     rd_status_t err_code = RD_SUCCESS;
+    return err_code;
     uint64_t next_sample_ms = m_last_sample_ms + (m_log_config.interval_s * 10U);
     LOGD ("LOG: Sample received\r\n");
 
