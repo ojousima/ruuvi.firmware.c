@@ -7,11 +7,11 @@
 #define APP_WDT_INTERVAL_MS (10U*60U*1000U)
 /** @brief Communicate sensor data at this interval. 221 matches Apple guideline. */
 #ifndef APP_HEARTBEAT_INTERVAL_MS
-#   define APP_HEARTBEAT_INTERVAL_MS (221U)
+#   define APP_HEARTBEAT_INTERVAL_MS (10U)
 #endif
 
 #ifndef APP_LOG_INTERVAL_S
-#   define APP_LOG_INTERVAL_S (1U) //!< Gets limited to heartbeat rate.
+#   define APP_LOG_INTERVAL_S (0U) //!< Gets limited to heartbeat rate.
 #endif
 
 #endif

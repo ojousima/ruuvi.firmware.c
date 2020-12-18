@@ -165,7 +165,7 @@ rd_status_t app_log_init (void)
 rd_status_t app_log_process (const rd_sensor_data_t * const sample)
 {
     rd_status_t err_code = RD_SUCCESS;
-    uint64_t next_sample_ms = m_last_sample_ms + (m_log_config.interval_s * 1000U);
+    uint64_t next_sample_ms = m_last_sample_ms + (m_log_config.interval_s * 10U);
     LOGD ("LOG: Sample received\r\n");
 
     // Always store first sample.
@@ -180,7 +180,7 @@ rd_status_t app_log_process (const rd_sensor_data_t * const sample)
         LOGD ("LOG: Storing sample\r\n");
         app_log_element_t element =
         {
-            .timestamp_s = sample->timestamp_ms / 1000U,
+            .timestamp_s = sample->timestamp_ms / 10U,
             .temperature_c = rd_sensor_data_parse (sample, RD_SENSOR_TEMP_FIELD),
             .humidity_rh = rd_sensor_data_parse (sample, RD_SENSOR_HUMI_FIELD),
             .pressure_pa = rd_sensor_data_parse (sample, RD_SENSOR_PRES_FIELD),

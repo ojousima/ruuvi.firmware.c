@@ -22,12 +22,12 @@
 #endif
 
 #ifndef APP_FW_VARIANT
-#define APP_FW_VARIANT "+default"
+#define APP_FW_VARIANT "+debug"
 #endif
 
 /** @brief Communicate sensor data at this interval. 1285 matches Apple guideline. */
 #ifndef APP_HEARTBEAT_INTERVAL_MS
-#   define APP_HEARTBEAT_INTERVAL_MS (1285U)
+#   define APP_HEARTBEAT_INTERVAL_MS (10U)
 #endif
 
 /** @brief Resample battery voltage at this interval */
